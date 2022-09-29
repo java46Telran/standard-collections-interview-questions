@@ -21,9 +21,8 @@ public class MyArray<T> {
 	 * @param value
 	 */
 	public void setAll(T value) {
-		mapOfSets = new HashMap<>();
-		allValues = value;
 		
+		//TODO
 	}
 	/**
 	 * 
@@ -31,11 +30,8 @@ public class MyArray<T> {
 	 * @return value at given index or null if index is wrong
 	 */
 	public T get(int index) {
-		T res = null;
-		if (index > -1 && index < size) {
-			res = mapOfSets.getOrDefault(index, allValues);
-		}
-		return res;
+		//TODO
+		return null;
 	}
 	/**
 	 * sets a given value at a given index
@@ -44,9 +40,6 @@ public class MyArray<T> {
 	 * @param value
 	 */
 	public void set(int index, T value) {
-		if (index < 0 || index >= size) {
-			throw new IndexOutOfBoundsException(index);
-		}
-		mapOfSets.put(index, value);
+		//TODO
 	}
 }
