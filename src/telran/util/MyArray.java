@@ -1,4 +1,7 @@
 package telran.util;
+
+import java.util.HashMap;
+
 /**
  * All methods of the class should have complexity O[1]
  * @author User
@@ -6,15 +9,19 @@ package telran.util;
  * @param <T>
  */
 public class MyArray<T> {
-//TODO fields
+	private T allValues;
+	private int size;
+	private HashMap<Integer, T> mapOfSets;
 	public MyArray(int size) {
-		//TODO
+		this.size = size;
+		mapOfSets = new HashMap<>();
 	}
 	/**
 	 * sets all array's elements with a given value
 	 * @param value
 	 */
 	public void setAll(T value) {
+		
 		//TODO
 	}
 	/**
@@ -24,7 +31,6 @@ public class MyArray<T> {
 	 */
 	public T get(int index) {
 		//TODO
-		
 		return null;
 	}
 	/**
