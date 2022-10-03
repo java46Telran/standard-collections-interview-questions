@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -32,6 +33,7 @@ class Java8StreamTests {
 		String [] technolgies;
 		
 	}
+	private static final long N_NUMBERS = 1_000_000;
 	List<Programmer> programmers;
 	String[] technologies1 = {"Java", "SQL", "C++"};
 	String[] technologies2 = {"Java"};
@@ -80,12 +82,18 @@ class Java8StreamTests {
 	}
 	@Test
 	void printDigitOccurrences() {
+		
 		//TODO
 		//generate 1_000_000 random numbers from 0 to Integer.MAX_VALUE
 		//print digits occurrences in descending order of occurrences
 		// 1: <occurrences>
 		// 2: <occurrences>
 		// ......
+		new Random().ints(N_NUMBERS, 0, Integer.MAX_VALUE)
+		.mapToObj(Integer::toString).flatMapToInt(String::chars)
+		.boxed().collect(Collectors.groupingBy(n -> n, Collectors.counting()))
+		.entrySet().stream().sorted((e1, e2) -> Long.compare(e2.getValue(), e1.getValue()))
+		.forEach(e -> System.out.printf("%c: %d\n", e.getKey(), e.getValue()));
 	}
 	
 	
