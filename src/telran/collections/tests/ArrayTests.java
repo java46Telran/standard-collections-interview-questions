@@ -61,5 +61,27 @@ class ArrayTests {
 		
 		return res;
 	}
+	/**
+	 * The method doesn't update a given array
+	 * @param <T>
+	 * @param array
+	 * @return true if there is exactly one swap for getting sorted array
+	 * examples: {1, 2, 3, 10, -1, 5, 6} -> false
+	 * {1, 2, 3, 5, 6, 10} -> false
+	 * {1,3,2,4, 3, 10} -> false
+	 * {10, 2, 3, 4, 1} -> true
+	 * {1, 2, 4, 3, 5, 10} -> true
+	 * {1, 5, 3, 4, 2, 10} -> true
+	 * {"lmn", "ab", "bc", "cd", "a"} -> true
+	 * An Array should contain Comparable elements
+	 */
+	<T> boolean isOneSwapForSorted(T [] array) {
+		//TODO
+		return false;
+	}
+	@Test
+	void isOneSwapTest() {
+		//TODO
+	}
 
 }
